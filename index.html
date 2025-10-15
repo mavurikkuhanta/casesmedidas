@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resolução de Casos Clínicos - Versão Aprofundada</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Roboto', sans-serif; line-height: 1.8; background-color: #f8f9fa; color: #343a40; margin: 0; padding: 20px; }
+        .container { max-width: 900px; margin: auto; background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+        header { text-align: center; border-bottom: 2px solid #005a8d; margin-bottom: 40px; padding-bottom: 20px; }
+        h1, h2, h3, h4 { font-family: 'Roboto Slab', serif; }
+        h1 { color: #005a8d; font-size: 2.5em; margin: 0; }
+        h2 { color: #005a8d; border-bottom: 1px solid #dee2e6; padding-bottom: 10px; margin-top: 50px; }
+        h3 { color: #17a2b8; margin-top: 30px; }
+        h4 { color: #005a8d; }
+
+        details { margin-bottom: 1rem; border: 1px solid #dee2e6; border-radius: 5px; }
+        summary { font-weight: bold; padding: 1rem; cursor: pointer; background-color: #f8f9fa; color: #005a8d; list-style: revert; }
+        .details-content { padding: 1rem; }
+        .details-content ul { padding-left: 20px; }
+
+        .action-btn { display: inline-block; width: auto; padding: 12px 25px; font-size: 1em; font-weight: bold; color: #fff; background-color: #007bff; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px; transition: background-color 0.3s; }
+        .action-btn:hover { background-color: #0069d9; }
+
+        .modal { position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.5); display: none; align-items: center; justify-content: center; }
+        .modal-content { background-color: #fff; margin: auto; padding: 30px; border: 1px solid #888; width: 90%; max-width: 800px; border-radius: 8px; }
+        .modal-body { display: grid; grid-template-columns: 1fr; gap: 20px; }
+        @media (min-width: 768px) { .modal-body { grid-template-columns: 2fr 1fr; } }
+        .modal-content label { font-weight: bold; display: block; margin-bottom: 5px; }
+        .modal-content input, .modal-content textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        .modal-content textarea { min-height: 150px; resize: vertical; margin-bottom: 10px; }
+        .modal-guide { background-color: #f8f9fa; padding: 15px; border-radius: 5px; font-size: 0.9em; }
+        .modal-guide h4 { margin-top: 0; }
+        .modal-guide ul { padding-left: 20px; }
+
+        .feedback-history { margin-top: 20px; }
+        .history-item { border: 1px solid #ddd; padding: 10px; border-radius: 5px; margin-bottom: 10px; background-color: #f9f9f9; }
+        .history-item-header { font-weight: bold; display: flex; justify-content: space-between; }
+        .history-item-score { font-size: 1.2em; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Análise de Casos Clínicos - Versão Aprofundada</h1>
+            <p>Estude a análise detalhada, elabore sua prescrição e comunicação para receber um feedback completo.</p>
+        </header>
+
+        <main>
+            <section id="caso1">
+                <h2>Caso 1: Obesidade Grau II e Síndrome Metabólica</h2>
+                <details><summary>Análise do Caso</summary><div class="details-content"><p><strong>Histórico do Paciente:</strong> Marcos, 45 anos, arquiteto, trabalha longas horas sentado e relata uma dieta desregrada, com alto consumo de fast-food e bebidas açucaradas. Queixa-se de fadiga extrema ao final do dia, dores lombares e falta de disposição para atividades de lazer. Histórico familiar de pai com DMT2 e mãe hipertensa. Ele está assustado com um recente "puxão de orelha" de seu médico e demonstra estar motivado, mas perdido.</p></div></details>
+                <details><summary>Dados da Avaliação</summary><div class="details-content"><ul><li><strong>Dados Antropométricos:</strong> Peso: 110 kg; Altura: 1,75 m; IMC: 35.9 kg/m² (Obesidade Grau II); Circunferência da Cintura: 115 cm.</li><li><strong>Sinais Vitais:</strong> Pressão Arterial: 145/92 mmHg (Hipertensão Estágio 1).</li><li><strong>Exames Laboratoriais:</strong> Glicemia de Jejum: 112 mg/dL (Glicemia de jejum alterada); Triglicerídeos: 250 mg/dL (Elevado); HDL-c: 35 mg/dL (Baixo).</li></ul></div></details>
+                <details><summary>Explicações Científicas</summary><div class="details-content"><h3>Fisiológica</h3><p>A obesidade central (cintura de 115 cm) é o motor da síndrome metabólica. O tecido adiposo visceral é metabolicamente ativo e libera adipocinas inflamatórias (como TNF-α e IL-6), que promovem um estado de <strong>inflamação crônica de baixo grau</strong> e contribuem diretamente para a <strong>resistência à insulina</strong>. Os exames (glicemia alterada, triglicerídeos altos, HDL baixo) confirmam este quadro. A hipertensão é exacerbada pela resistência à insulina e pelo aumento do volume sanguíneo e débito cardíaco necessários para perfundir a massa corporal extra.</p><h3>Bioquímica</h3><p>A resistência à insulina, evidenciada pela glicemia de 112 mg/dL, significa que os receptores de insulina nos músculos e fígado estão menos responsivos. Isso prejudica a translocação dos transportadores de glicose <strong>GLUT-4</strong> para a membrana celular. O exercício, no entanto, ativa a via da <strong>AMPK</strong>, que consegue estimular a translocação de GLUT-4 de forma independente da insulina. Cada sessão de treino funciona como uma "dose de sensibilizador de insulina".</p></div></details>
+                <details><summary>Método de Treinamento Adequado</summary><div class="details-content"><p>A linha de raciocínio é <strong>segurança articular e cardiovascular com máximo gasto calórico e melhora da sensibilidade à insulina</strong>.</p><ul><li><strong>Treinamento Concorrente:</strong> É a abordagem ideal. O treino de força aumenta a massa muscular, que funciona como um "ralo de glicose", enquanto o cardio melhora a saúde cardiovascular e a oxidação de gorduras.</li><li><strong>Força:</strong> Iniciar com 2-3x/semana. Priorizar exercícios multiarticulares em máquinas ou com pesos livres guiados para garantir a segurança. O formato de circuito pode ser excelente para manter a FC elevada e otimizar o tempo.</li><li><strong>Cardiovascular:</strong> Iniciar com atividades de <strong>baixo impacto</strong> (bicicleta, elíptico, caminhada com inclinação) por 30-45 minutos, 3-5x/semana. A prioridade inicial é a consistência, não a intensidade.</li></ul></div></details>
+                <details><summary>Diretrizes Nutricionais</summary><div class="details-content"><p>Um <strong>déficit calórico moderado (500-750 kcal/dia)</strong> é essencial. A dieta deve ser rica em fibras e ter uma ingestão proteica elevada (1.6-2.0 g/kg) para promover saciedade e minimizar a perda de massa magra. A qualidade dos carboidratos deve ser priorizada (complexos vs. simples) para ajudar no controle glicêmico.</p></div></details>
+                <button class="action-btn" onclick="openPrescriptionModal('caso1')">Elaborar e Avaliar Proposta</button>
+                <div class="feedback-history" id="history-container-caso1"><h3>Histórico de Tentativas:</h3></div>
+            </section>
+            
+            <section id="caso2">
+                <h2>Caso 2: Diabetes Mellitus Tipo 2 (DMT2) em Idosa</h2>
+                <details><summary>Análise do Caso</summary><div class="details-content"><p><strong>Histórico do Paciente:</strong> Sônia, 68 anos, aposentada. Diagnosticada com DMT2 há 5 anos, usa metformina. Relata episódios de tontura (suspeita de hipoglicemia) e uma fraqueza crescente nas pernas, com dificuldade para subir escadas. Tem medo de se tornar dependente dos filhos. Demonstra receio de iniciar exercícios por medo de "passar mal".</p></div></details>
+                <details><summary>Dados da Avaliação</summary><div class="details-content"><ul><li><strong>Dados Antropométricos:</strong> Leve sobrepeso (IMC 28 kg/m²). Avaliação de bioimpedância sugere baixa massa muscular (sarcopenia).</li><li><strong>Exames Laboratoriais:</strong> Hemoglobina Glicada (HbA1c): 7.8% (Controle inadequado).</li><li><strong>Testes Funcionais:</strong> Teste de sentar e levantar de 5 repetições realizado com dificuldade e em tempo elevado.</li></ul></div></details>
+                <details><summary>Explicações Científicas</summary><div class="details-content"><h3>Fisiológica</h3><p>A HbA1c de 7.8% indica um mau controle glicêmico nos últimos 3 meses. A sarcopenia agrava drasticamente este quadro, pois os músculos esqueléticos são o principal local de captação de glicose pós-prandial. A fraqueza relatada é um sinal clínico direto da sarcopenia. O exercício de força é a intervenção mais potente para combater a sarcopenia e, consequentemente, melhorar a sensibilidade à insulina.</p><h3>Bioquímica</h3><p>O efeito agudo do exercício na captação de glicose (via <strong>AMPK/GLUT-4</strong>) é vital. Uma sessão de treino pode melhorar a sensibilidade à insulina por 24-48 horas. Cronicamente, o aumento da massa muscular cria mais "portas" (GLUT-4) e mais "espaço" (glicogênio muscular) para a glicose, reduzindo a sobrecarga do pâncreas e ajudando a estabilizar a glicemia, como refletido na redução da HbA1c a longo prazo.</p></div></details>
+                <details><summary>Método de Treinamento Adequado</summary><div class="details-content"><p>A abordagem é <strong>segurança máxima (risco de hipoglicemia), combate à sarcopenia e melhora da funcionalidade</strong>.</p><ul><li><strong>Treinamento de Força:</strong> É o pilar. 2-3x/semana, focando em grandes grupos musculares, especialmente pernas e core. Exercícios como leg press, remada sentada e o próprio "sentar e levantar" são seguros e eficazes.</li><li><strong>Cardiovascular:</strong> Intensidade moderada (caminhada, bicicleta), iniciando com 20-30 minutos e progredindo. Evitar alta intensidade no início.</li><li><strong>Monitoramento:</strong> Orientar a medir a glicemia antes e após o exercício é inegociável. Aconselhar a ter sempre um carboidrato de ação rápida disponível. Nunca treinar em jejum.</li></ul></div></details>
+                <details><summary>Diretrizes Nutricionais</summary><div class="details-content"><p>Dieta com foco no <strong>controle glicêmico</strong>. A ingestão proteica deve ser alta (1.2-1.6 g/kg) e bem distribuída para otimizar a síntese proteica e combater a resistência anabólica do envelhecimento.</p></div></details>
+                <button class="action-btn" onclick="openPrescriptionModal('caso2')">Elaborar e Avaliar Proposta</button><div class="feedback-history" id="history-container-caso2"><h3>Histórico de Tentativas:</h3></div></section>
+            
+            <section id="caso3">
+                <h2>Caso 3: Hipertensão Arterial Sistêmica (HAS)</h2>
+                <details><summary>Análise do Caso</summary><div class="details-content"><p><strong>Histórico do Paciente:</strong> Roberto, 55 anos, gerente comercial. Relata uma rotina de alta pressão e estresse, com poucas horas de sono. É pré-obeso (IMC 29 kg/m²) e sedentário. Usa Losartana para controlar a HAS. Gostaria de uma alternativa ou complemento ao remédio para se sentir mais saudável.</p></div></details>
+                <details><summary>Dados da Avaliação</summary><div class="details-content"><ul><li><strong>Sinais Vitais:</strong> Pressão Arterial em repouso (medicado): 138/88 mmHg. Frequência Cardíaca de Repouso: 82 bpm.</li><li><strong>Exames Laboratoriais:</strong> Colesterol Total: 220 mg/dL; LDL: 150 mg/dL (ambos elevados).</li></ul></div></details>
+                <details><summary>Explicações Científicas</summary><div class="details-content"><h3>Fisiológica</h3><p>O exercício promove a <strong>hipotensão pós-exercício (HPE)</strong>, uma queda na pressão arterial que pode durar por várias horas após a sessão. Isso ocorre principalmente devido à vasodilatação periférica induzida pelo exercício. Cronicamente, o treino melhora a função endotelial (aumentando a produção de óxido nítrico, um potente vasodilatador), reduz a atividade do sistema nervoso simpático (que contrai os vasos) e diminui a rigidez arterial.</p><h3>Biomecânica</h3><p>Durante o treino de força, a <strong>manobra de Valsalva</strong> (prender a respiração) deve ser estritamente evitada, pois causa picos pressóricos perigosos. A respiração deve ser contínua e controlada: expirar durante a fase de esforço (concêntrica) e inspirar no retorno (excêntrica).</p></div></details>
+                <details><summary>Método de Treinamento Adequado</summary><div class="details-content"><p>A linha de raciocínio é <strong>promover a HPE e garantir a segurança cardiovascular</strong>.</p><ul><li><strong>Treinamento Cardiovascular:</strong> Prioridade. Exercícios aeróbios de intensidade moderada (40-60% do VO2max), 30-60 minutos, na maioria dos dias da semana.</li><li><strong>Treinamento de Força:</strong> 2-3x/semana, com cargas moderadas (50-70% de 1RM) e mais repetições (10-15). Evitar falha muscular e cargas muito altas. Treinamento em circuito é uma excelente opção.</li><li><strong>Técnica de Respiração:</strong> Ensinar e reforçar a respiração correta é um ponto inegociável da prescrição.</li></ul></div></details>
+                <details><summary>Diretrizes Nutricionais</summary><div class="details-content"><p>A principal recomendação é a <strong>redução da ingestão de sódio</strong>. A dieta DASH (Dietary Approaches to Stop Hypertension) é o padrão-ouro, enfatizando frutas, vegetais e grãos integrais, e limitando gorduras saturadas.</p></div></details>
+                <button class="action-btn" onclick="openPrescriptionModal('caso3')">Elaborar e Avaliar Proposta</button><div class="feedback-history" id="history-container-caso3"><h3>Histórico de Tentativas:</h3></div></section>
+
+            <section id="caso4">
+                 <h2>Caso 4: Vigorexia (Dismorfia Muscular)</h2>
+                <details><summary>Análise do Caso</summary><div class="details-content"><p><strong>Histórico do Paciente:</strong> Lucas, 22 anos, estudante universitário. Passa várias horas por dia consumindo conteúdo fitness em redes sociais. Apesar de ter um físico visivelmente atlético (BF ~10%), ele se descreve como "pequeno e sem forma". Relata que cancela compromissos sociais para não perder treinos e pesa todas as suas refeições de forma obsessiva.</p></div></details>
+                <details><summary>Dados da Avaliação</summary><div class="details-content"><ul><li><strong>Comportamental:</strong> Treina 6-7 dias/semana, sessões de 2-3 horas, com alto volume e intensidade. Relata ansiedade e irritabilidade nos dias em que não consegue treinar.</li><li><strong>Sinais Clínicos:</strong> Fadiga crônica, dores articulares persistentes (ombros e joelhos), sono de má qualidade.</li><li><strong>Objetivo Declarado:</strong> "Ficar muito maior, quero ser gigante".</li></ul></div></details>
+                <details><summary>Explicações Científicas</summary><div class="details-content"><h3>Fisiológica</h3><p>O <strong>overtraining</strong> crônico desregula o eixo Hipotálamo-Pituitária-Adrenal (HPA), mantendo os níveis de <strong>cortisol</strong> (hormônio do estresse e catabólico) cronicamente elevados. Isso não só impede a recuperação e a síntese proteica, mas também pode suprimir a produção de hormônios anabólicos como a testosterona, criando um ambiente hormonal que paradoxalmente dificulta o ganho de massa muscular.</p><h3>Bioquímica</h3><p>O dano muscular excessivo sem recuperação adequada leva a um estado inflamatório sistêmico e ao estresse oxidativo. O corpo prioriza a "gestão de crise" (combater a inflamação e reparar o dano excessivo) em detrimento dos processos de supercompensação e anabolismo (crescimento muscular).</p></div></details>
+                <details><summary>Método de Treinamento Adequado</summary><div class="details-content"><p>A linha de raciocínio é <strong>reduzir o volume, focar na qualidade e reeducar a relação com o treino</strong>. A abordagem exige sensibilidade e o profissional deve fortemente recomendar acompanhamento psicológico.</p><ul><li><strong>Redução de Volume e Frequência:</strong> Propor um período de <strong>deload</strong> (uma semana de treinos muito leves). Em seguida, reestruturar o treino para 4 dias/semana, com sessões de 60 minutos, focando na qualidade da execução.</li><li><strong>Foco em Metas de Performance:</strong> Desviar o foco da estética para metas de força mensuráveis e saudáveis (ex: aumentar a carga em 5% no supino em 4 semanas).</li><li><strong>Ênfase na Recuperação:</strong> O descanso deve ser prescrito como parte do treino. Explicar que o crescimento muscular ocorre durante o descanso, não durante o treino.</li></ul></div></details>
+                <details><summary>Diretrizes Nutricionais</summary><div class="details-content"><p>O objetivo é promover a <strong>flexibilidade alimentar</strong>. Assegurar que a ingestão calórica seja adequada (manutenção ou leve superávit) e desencorajar a restrição extrema de grupos alimentares. O trabalho em conjunto com um nutricionista é fundamental.</p></div></details>
+                <button class="action-btn" onclick="openPrescriptionModal('caso4')">Elaborar e Avaliar Proposta</button><div class="feedback-history" id="history-container-caso4"><h3>Histórico de Tentativas:</h3></div></section>
+            
+            <section id="caso5">
+                <h2>Caso 5: SOP e Resistência à Insulina</h2>
+                <details><summary>Análise do Caso</summary><div class="details-content"><p><strong>Histórico do Paciente:</strong> Juliana, 29 anos, designer gráfica. Diagnosticada com Síndrome do Ovário Policístico (SOP) há 2 anos. Luta contra o peso "desde sempre", com dificuldade em emagrecer mesmo com dietas restritivas. Apresenta ciclos menstruais irregulares, acne e fadiga.</p></div></details>
+                <details><summary>Dados da Avaliação</summary><div class="details-content"><ul><li><strong>Dados Antropométricos:</strong> Sobrepeso (IMC 29.5 kg/m²), com acúmulo de gordura predominante na região abdominal.</li><li><strong>Exames Laboratoriais:</strong> HOMA-IR: 3.5 (indicativo de Resistência à Insulina); Testosterona Livre: Levemente elevada.</li></ul></div></details>
+                <details><summary>Explicações Científicas</summary><div class="details-content"><h3>Fisiológica</h3><p>A <strong>resistência à insulina</strong> (confirmada pelo HOMA-IR) é a causa raiz para a maioria dos sintomas. A hiperinsulinemia compensatória estimula os ovários a produzir mais andrógenos (testosterona), causando os ciclos irregulares e a acne. Além disso, a insulina é um hormônio lipogênico (promove o armazenamento de gordura), e sua alta concentração torna a perda de peso extremamente difícil.</p><h3>Bioquímica</h3><p>O exercício de força é a principal ferramenta não-farmacológica para combater a resistência à insulina. A contração muscular esgota os estoques de glicogênio. Na fase de recuperação, o músculo se torna uma "esponja de glicose", aumentando a expressão de transportadores <strong>GLUT-4</strong> para repor seus estoques, captando glicose do sangue de forma eficiente e reduzindo a necessidade de picos de insulina.</p></div></details>
+                <details><summary>Método de Treinamento Adequado</summary><div class="details-content"><p>A linha de raciocínio é <strong>maximizar a sensibilidade à insulina e a recomposição corporal</strong>.</p><ul><li><strong>Treinamento de Força:</strong> É a intervenção mais importante. 3x/semana, com foco em hipertrofia para aumentar a massa muscular. Mais músculos = mais locais para a glicose ser armazenada.</li><li><strong>HIIT:</strong> 1-2x/semana. Sessões curtas de HIIT são muito eficazes para melhorar a sensibilidade à insulina e otimizar o tempo.</li><li><strong>NEAT:</strong> Incentivar um estilo de vida ativo (caminhadas, usar escadas) para aumentar o gasto calórico diário.</li></ul></div></details>
+                <details><summary>Diretrizes Nutricionais</summary><div class="details-content"><p>Dieta com <strong>baixo a moderado índice glicêmico</strong>. A combinação de proteínas, fibras e gorduras saudáveis em todas as refeições ajuda a modular a resposta da insulina. Um déficit calórico moderado é necessário.</p></div></details>
+                <button class="action-btn" onclick="openPrescriptionModal('caso5')">Elaborar e Avaliar Proposta</button><div class="feedback-history" id="history-container-caso5"><h3>Histórico de Tentativas:</h3></div></section>
+
+            <section id="caso6">
+                 <h2>Caso 6: Caquexia Associada ao Câncer</h2>
+                 <details><summary>Análise do Caso</summary><div class="details-content"><p><strong>Histórico do Paciente:</strong> José, 60 anos, diagnosticado com câncer de pulmão, está em tratamento quimioterápico. Apresenta perda de peso acentuada (>10% do peso corporal em 6 meses), fadiga severa, anorexia (falta de apetite) e fraqueza generalizada. Possui liberação médica para exercício supervisionado.</p></div></details>
+                <details><summary>Dados da Avaliação</summary><div class="details-content"><ul><li><strong>Dados Antropométricos:</strong> Perda de 8kg em 4 meses. Perda visível de massa muscular em braços e pernas.</li><li><strong>Testes Funcionais:</strong> Timed Up and Go (TUG) com tempo muito elevado, indicando alto risco de quedas. Força de preensão manual muito reduzida.</li></ul></div></details>
+                 <details><summary>Explicações Científicas</summary><div class="details-content"><h3>Fisiológica</h3><p>A caquexia é uma síndrome de desgaste impulsionada por uma <strong>inflamação sistêmica crônica</strong>, onde citocinas pró-inflamatórias (como TNF-α) liberadas pelo tumor e pela resposta imune promovem um estado hipercatabólico. O exercício físico de baixa intensidade pode ter um efeito <strong>anti-inflamatório</strong> ao estimular a produção de miocinas com ação reguladora, ajudando a modular este ambiente hostil.</p><h3>Bioquímica</h3><p>O estado catabólico na caquexia é tão intenso que a via de degradação proteica (ubiquitina-proteassoma) supera a de síntese. O treino de força, mesmo leve, é um dos poucos estímulos capazes de ativar a via de síntese <strong>mTOR</strong>, ajudando a "frear" a perda de massa muscular, mesmo que não seja capaz de revertê-la completamente durante a fase ativa da doença.</p></div></details>
+                 <details><summary>Método de Treinamento Adequado</summary><div class="details-content"><p>A abordagem é <strong>terapêutica, de baixo volume, focada na funcionalidade e qualidade de vida</strong>.</p><ul><li><strong>Força:</strong> Cargas muito leves (até mesmo sem carga, apenas o movimento), 1-2 séries de 8-12 repetições, focando em exercícios funcionais (sentar e levantar, puxar um elástico leve). A percepção de esforço do paciente é o principal guia. O objetivo é estimular, nunca exaurir.</li><li><strong>Aeróbicos Leves:</strong> Caminhadas curtas (5-10 minutos) ou ciclismo em ergômetro sem carga, conforme a tolerância, podem ajudar a combater a fadiga.</li><li><strong>Flexibilidade:</strong> Alongamentos passivos e ativos para manter a mobilidade.</li></ul></div></details>
+                 <details><summary>Diretrizes Nutricionais</summary><div class="details-content"><p>Aumentar a densidade calórica e proteica das refeições é o foco. Suplementação com <strong>proteínas de alto valor biológico e aminoácidos como a leucina</strong> é crucial. O trabalho com um nutricionista oncológico é indispensável.</p></div></details>
+                 <button class="action-btn" onclick="openPrescriptionModal('caso6')">Elaborar e Avaliar Proposta</button><div class="feedback-history" id="history-container-caso6"><h3>Histórico de Tentativas:</h3></div></section>
+            
+            <section id="caso7">
+                 <h2>Caso 7: Anorexia Nervosa em Recuperação</h2>
+                 <details><summary>Análise do Caso</summary><div class="details-content"><p><strong>Histórico do Paciente:</strong> Mariana, 19 anos, em tratamento para anorexia nervosa com equipe multidisciplinar (médico, psicólogo, nutricionista). Após atingir um peso mínimo de segurança, recebeu liberação para iniciar atividade física supervisionada. Apresenta amenorreia (ausência de menstruação) e grande medo de que o exercício "a faça queimar calorias demais".</p></div></details>
+                <details><summary>Dados da Avaliação</summary><div class="details-content"><ul><li><strong>Dados Clínicos:</strong> IMC de 18.0 kg/m². Exame de densitometria óssea revelou <strong>osteopenia</strong>.</li><li><strong>Comportamental:</strong> A relação com o exercício é disfuncional, previamente usado de forma compulsiva para gastar calorias.</li></ul></div></details>
+                 <details><summary>Explicações Científicas</summary><div class="details-content"><h3>Fisiológica</h3><p>A desnutrição crônica e a amenorreia (causada pela baixa gordura corporal e estresse) levam a uma perda acelerada de massa óssea, resultando em osteopenia e alto risco de osteoporose precoce. O treino de força é um potente <strong>estímulo osteogênico</strong>: a tensão mecânica nos ossos sinaliza para os osteoblastos (células construtoras de osso) aumentarem a deposição de minerais.</p><h3>Bioquímica</h3><p>O foco é mudar o paradigma do exercício de um processo catabólico (gasto de energia) para um <strong>anabólico</strong> (construção de tecidos). Isso requer a ativação da via <code>mTOR</code> para síntese proteica, que só é eficaz na presença de um <strong>superávit calórico e proteico</strong>. Sem "tijolos" (nutrientes), o estímulo do treino é inútil ou até deletério.</p></div></details>
+                 <details><summary>Método de Treinamento Adequado</summary><div class="details-content"><p>A abordagem é <strong>focada na saúde, com total dissociação do gasto calórico</strong>. A comunicação com a equipe multidisciplinar é obrigatória.</p><ul><li><strong>Treino de Força:</strong> É a única modalidade recomendada. 2x/semana, com volume muito baixo (ex: 2 séries de 8-12 reps) e foco na técnica perfeita e na sensação de "força".</li><li><strong>Proibição de Cardio:</strong> Qualquer exercício aeróbio contínuo deve ser estritamente evitado no início.</li><li><strong>Foco na Conexão Corporal:</strong> A linguagem usada deve ser sobre "construir um corpo forte", "proteger seus ossos", "sentir seus músculos trabalhando", nunca sobre calorias ou estética.</li></ul></div></details>
+                 <details><summary>Diretrizes Nutricionais</summary><div class="details-content"><p>O profissional de educação física deve atuar em total sintonia com o nutricionista, reforçando para a paciente a necessidade de um <strong>superávit calórico</strong> para que os objetivos de ganho de massa muscular e óssea sejam alcançados.</p></div></details>
+                 <button class="action-btn" onclick="openPrescriptionModal('caso7')">Elaborar e Avaliar Proposta</button><div class="feedback-history" id="history-container-caso7"><h3>Histórico de Tentativas:</h3></div></section>
+            
+            <section id="caso8">
+                 <h2>Caso 8: Hipotireoidismo e Metabolismo</h2>
+                 <details><summary>Análise do Caso</summary><div class="details-content"><p><strong>Histórico do Paciente:</strong> Fernanda, 38 anos, advogada. Foi diagnosticada com hipotireoidismo subclínico e iniciou reposição hormonal (Levotiroxina). Mesmo medicada, queixa-se de fadiga persistente, dificuldade de concentração, sensação de frio e um ganho de peso de 5kg no último ano que ela não consegue reverter.</p></div></details>
+                <details><summary>Dados da Avaliação</summary><div class="details-content"><ul><li><strong>Exames Laboratoriais:</strong> TSH: 4.8 µUI/mL (no limite superior, mesmo com medicação); T4 Livre: Dentro da normalidade.</li><li><strong>Composição Corporal:</strong> Aumento do percentual de gordura (35%), com manutenção do peso de massa magra.</li></ul></div></details>
+                 <details><summary>Explicações Científicas</summary><div class="details-content"><h3>Fisiológica</h3><p>Os hormônios tireoidianos são os principais reguladores da <strong>Taxa Metabólica de Repouso (TMR)</strong>. Mesmo com a medicação, um TSH no limite superior pode indicar uma função tireoidiana não otimizada, resultando em uma TMR mais baixa. O exercício atua como um "plano B": o aumento da <strong>massa muscular</strong> é a forma mais eficaz de elevar a TMR de forma independente, pois o tecido muscular é altamente ativo metabolicamente.</p><h3>Bioquímica</h3><p>O exercício de alta intensidade (HIIT e força) pode aumentar a conversão periférica de T4 (hormônio menos ativo) em T3 (hormônio mais ativo) e aumentar a sensibilidade dos receptores celulares aos hormônios tireoidianos. Além disso, o aumento da atividade mitocondrial e o gasto energético pós-exercício (EPOC) ajudam a compensar a TMR reduzida.</p></div></details>
+                 <details><summary>Método de Treinamento Adequado</summary><div class="details-content"><p>A linha de raciocínio é <strong>aumentar a massa muscular e o gasto energético total</strong>.</p><ul><li><strong>Treino de Força (Hipertrofia):</strong> Prioridade máxima. 3x/semana, com volume e intensidade focados no ganho de massa muscular.</li><li><strong>HIIT:</strong> 1-2x/semana. Sessões curtas de HIIT são ótimas para estimular o metabolismo e combater a fadiga de forma eficiente.</li><li><strong>Cardio Contínuo:</strong> Usado como complemento para aumentar o gasto calórico semanal.</li></ul></div></details>
+                 <details><summary>Diretrizes Nutricionais</summary><div class="details-content"><p>Com a TMR reduzida, o déficit calórico deve ser conservador. A ingestão de <strong>proteínas</strong> deve ser alta para suportar a construção muscular. Micronutrientes como <strong>selênio, zinco e iodo</strong> são importantes para a função tireoidiana.</p></div></details>
+                 <button class="action-btn" onclick="openPrescriptionModal('caso8')">Elaborar e Avaliar Proposta</button><div class="feedback-history" id="history-container-caso8"><h3>Histórico de Tentativas:</h3></div></section>
+            
+            <section id="caso9">
+                 <h2>Caso 9: Pós-Cirurgia Bariátrica</h2>
+                 <details><summary>Análise do Caso</summary><div class="details-content"><p><strong>Histórico do Paciente:</strong> Cláudio, 50 anos, 1 ano de pós-operatório de bypass gástrico. Perdeu 50kg, saindo da obesidade mórbida. Sente-se feliz com a perda de peso, mas muito frustrado com a flacidez excessiva e a fraqueza geral, que o impede de realizar tarefas simples.</p></div></details>
+                <details><summary>Dados da Avaliação</summary><div class="details-content"><ul><li><strong>Composição Corporal (DEXA):</strong> Percentual de gordura de 25%, mas com massa magra no percentil inferior para sua idade e altura. A análise mostra que cerca de 35% do peso perdido foi de massa magra.</li><li><strong>Nutricional:</strong> Relata dificuldade em atingir as metas de proteína diária devido ao volume estomacal reduzido. Apresenta deficiência de Vitamina B12 e Ferro.</li></ul></div></details>
+                 <details><summary>Explicações Científicas</summary><div class="details-content"><h3>Fisiológica</h3><p>A perda de peso massiva e rápida da cirurgia bariátrica induz uma <strong>sarcopenia secundária</strong> severa. A perda de massa muscular reduz drasticamente a taxa metabólica de repouso, criando um alto risco de reganho de peso (em forma de gordura) a longo prazo. O treino de força é a única intervenção capaz de reverter esse quadro, reconstruindo a "armadura" metabólica do corpo.</p><h3>Bioquímica</h3><p>Pacientes bariátricos sofrem de <strong>má absorção crônica de nutrientes</strong>. A síntese proteica muscular é duplamente desafiada: pela baixa ingestão e pela baixa absorção. O estímulo tensional do treino de força é vital, pois sinaliza (via <code>mTOR</code>) para o corpo priorizar o direcionamento dos poucos aminoácidos absorvidos para a construção e manutenção do tecido muscular.</p></div></details>
+                 <details><summary>Método de Treinamento Adequado</summary><div class="details-content"><p>A abordagem é <strong>hipertrofia e força funcional</strong> para reconstruir a base metabólica.</p><ul><li><strong>Treino de Força:</strong> Prioridade absoluta. 3-4x/semana, com um programa de hipertrofia bem estruturado e com progressão de cargas constante.</li><li><strong>Treino Funcional:</strong> Integrar exercícios que melhorem a força para atividades diárias.</li><li><strong>Cardiovascular:</strong> Usado como complemento para a saúde cardiovascular, mas não deve ser a prioridade.</li></ul></div></details>
+                 <details><summary>Diretrizes Nutricionais</summary><div class="details-content"><p>A ingestão de <strong>proteínas</strong> é a maior prioridade e desafio. A meta deve ser muito alta (1.5-2.0 g/kg de peso ideal) e a suplementação com whey protein isolado ou hidrolisado é quase sempre necessária. O acompanhamento com nutricionista é indispensável.</p></div></details>
+                 <button class="action-btn" onclick="openPrescriptionModal('caso9')">Elaborar e Avaliar Proposta</button><div class="feedback-history" id="history-container-caso9"><h3>Histórico de Tentativas:</h3></div></section>
+        </main>
+    </div>
+
+    <!-- Modal para Prescrição -->
+    <div id="prescription-modal" class="modal">
+        <div class="modal-content">
+            <span onclick="closePrescriptionModal()" style="float:right; cursor:pointer; font-size: 1.5em;">&times;</span>
+            <h2>Elaborar Proposta de Solução</h2>
+            <input type="hidden" id="current-case-id">
+            <div id="modal-case-summary" class="modal-guide" style="margin-bottom: 20px;"></div>
+            <div class="modal-body">
+                <div>
+                    <div><label for="student-name">Seu Nome / Nome do Grupo:</label><input type="text" id="student-name" placeholder="Digite o nome aqui..."></div>
+                    <div><label for="prescription-text">1. Prescrição Técnica:</label><textarea id="prescription-text"></textarea></div>
+                    <div><label for="communication-text">2. Comunicação com o Cliente:</label><textarea id="communication-text"></textarea></div>
+                </div>
+                <div class="modal-guide">
+                    <h4>Checklist de Avaliação</h4>
+                    <div id="modal-checklist"></div>
+                </div>
+            </div>
+            <button class="action-btn" onclick="evaluatePrescription()">Avaliar Minha Proposta</button>
+        </div>
+    </div>
+
+    <script>
+        const casesData = {
+            caso1: {
+                summary: "<strong>Pontos-Chave:</strong> Paciente obeso com comorbidades (HAS, Dislipidemia). Segurança articular (baixo impacto) e controle cardiovascular são prioridades. Atenção aos exames alterados.",
+                evaluation: {
+                    technical: { 'concorrente': 'Mencionou treino concorrente.', 'baixo impacto': 'Priorizou baixo impacto.', 'força': 'Incluiu treino de força.', 'multiarticular': 'Focou em exercícios multiarticulares.' },
+                    communication: { 'risco': 'Explicou os riscos da síndrome metabólica.', 'segurança': 'Enfatizou a segurança articular.', 'glicemia': 'Conectou o treino à melhora da glicemia/triglicerídeos.', 'juntos': 'Usou uma linguagem de parceria ("vamos", "juntos").' },
+                    negative: { 'alto impacto': 'Prescrever alto impacto é perigoso.', 'corrida': 'Sugerir corrida intensa no início é inadequado.' },
+                    mustHave: ['força', 'cardio', 'segurança']
+                }
+            },
+            caso2: {
+                summary: "<strong>Pontos-Chave:</strong> Idosa com DMT2 e sarcopenia. Risco de hipoglicemia é real (relato de tontura). O treino de força é o pilar para o controle glicêmico (HbA1c alta) e funcionalidade.",
+                evaluation: {
+                    technical: { 'força': 'Prescreveu treino de força.', 'monitorar': 'Mencionou o monitoramento da glicemia.', 'grandes grupos': 'Focou em grandes grupos musculares.' },
+                    communication: { 'independência': 'Conectou o treino à independência e funcionalidade.', 'segurança': 'Explicou a importância do monitoramento para a segurança dela.', 'sarcopenia': 'Abordou a questão da perda de massa muscular (sarcopenia).' },
+                    negative: { 'jejum': 'ERRO GRAVE: Treino em jejum é contraindicado.', 'alta intensidade': 'Sugerir alta intensidade sem controle é arriscado.' },
+                    mustHave: ['força', 'monitorar', 'segurança']
+                }
+            },
+            caso3: {
+                summary: "<strong>Pontos-Chave:</strong> Hipertensão. O cardio moderado é a prioridade. Evitar a manobra de Valsalva no treino de força é inegociável.",
+                evaluation: {
+                    technical: { 'aeróbio': 'Priorizou o treino aeróbio.', 'moderada': 'Indicou intensidade moderada.', 'valsalva': 'Alertou sobre evitar a manobra de Valsalva.' },
+                    communication: { 'hipotensão': 'Explicou o efeito benéfico da hipotensão pós-exercício.', 'estresse': 'Relacionou o treino como uma ferramenta de controle do estresse.', 'médico': 'Reforçou que a redução de medicamentos depende de aval médico.' },
+                    negative: { 'carga máxima': 'Prescrever treinos com carga máxima é perigoso.', 'isometria': 'Isometria prolongada em alta intensidade deve ser evitada.' },
+                    mustHave: ['aeróbio', 'valsalva']
+                }
+            },
+            caso4: {
+                summary: "<strong>Pontos-Chave:</strong> Vigorexia (overtraining). O objetivo é reduzir o volume e reeducar a relação com o treino. A recuperação é parte do treino. Recomendar ajuda psicológica.",
+                evaluation: {
+                    technical: { 'volume': 'Abordou a necessidade de reduzir o volume.', 'descanso': 'Enfatizou a importância do descanso.', 'qualidade': 'Mudou o foco de quantidade para qualidade.'},
+                    communication: { 'psicológico': 'Recomendou acompanhamento psicológico.', 'saúde': 'Reprogramou o objetivo para metas de saúde e performance, não só estética.', 'overtraining': 'Explicou os malefícios do overtraining de forma clara.' },
+                    negative: { 'mais treino': 'Sugerir mais treino demonstra não ter entendido a condição.', 'todo dia': 'Incentivar o treino diário é reforçar o comportamento de risco.' },
+                    mustHave: ['volume', 'descanso']
+                }
+            },
+            caso5: {
+                summary: "<strong>Pontos-Chave:</strong> SOP. A causa raiz é a resistência à insulina (HOMA-IR elevado). O treino de força é a ferramenta mais poderosa para atacar o problema.",
+                evaluation: {
+                    technical: { 'força': 'Priorizou o treino de força.', 'hipertrofia': 'Focou em hipertrofia.', 'hiit': 'Incluiu o HIIT.' },
+                    communication: { 'insulina': 'Explicou de forma simples como o músculo ajuda a regular a insulina.', 'hormonal': 'Conectou o treino à regulação hormonal.', 'consistência': 'Enfatizou a importância da consistência.'},
+                    negative: { 'apenas cardio': 'Focar apenas em cardio é uma estratégia incompleta.' },
+                    mustHave: ['força', 'insulina']
+                }
+            },
+            caso6: {
+                summary: "<strong>Pontos-Chave:</strong> Caquexia. Caso gravíssimo de saúde. O treino é terapêutico, de baixíssimo volume e intensidade. O objetivo é estimular, nunca exaurir.",
+                evaluation: {
+                    technical: { 'funcionalidade': 'Focou em exercícios para a funcionalidade.', 'baixo volume': 'Prescreveu baixo volume e intensidade.', 'leve': 'Utilizou a palavra "leve" ou "moderado" para a intensidade.' },
+                    communication: { 'qualidade de vida': 'Mostrou que o objetivo é a qualidade de vida.', 'fadiga': 'Explicou que o exercício pode combater a fadiga.', 'segurança': 'Garantiu que o treino será seguro e respeitará os limites.' },
+                    negative: { 'alta intensidade': 'ERRO GRAVE: Prescrever alta intensidade ou HIIT é perigoso.', 'falha': 'Levar à falha muscular é totalmente contraindicado.' },
+                    mustHave: ['baixo volume', 'leve']
+                }
+            },
+            caso7: {
+                summary: "<strong>Pontos-Chave:</strong> Anorexia em recuperação. Foco total em saúde (massa óssea), não em gasto calórico. Cardio é proibido. O exercício é um estímulo para construir (anabólico).",
+                evaluation: {
+                    technical: { 'força': 'Prescreveu exclusivamente treino de força.', 'sem cardio': 'Explicitamente evitou o cardio.', 'baixo volume': 'Iniciou com volume e frequência baixos.' },
+                    communication: { 'anabólico': 'Encarou o exercício como estímulo anabólico.', 'saúde óssea': 'Mencionou a importância para a saúde óssea.', 'multidisciplinar': 'Reforçou a importância da equipe de saúde.' },
+                    negative: { 'cardio': 'Incluir qualquer tipo de cardio é um erro.', 'gasto calórico': 'Mencionar "gasto calórico" reforça a mentalidade do transtorno.' },
+                    mustHave: ['força', 'sem cardio']
+                }
+            },
+            caso8: {
+                summary: "<strong>Pontos-Chave:</strong> Hipotireoidismo. O problema é a queda na Taxa Metabólica de Repouso (TMR). A solução mais eficaz é aumentar a massa muscular.",
+                evaluation: {
+                    technical: { 'massa muscular': 'Focou no aumento da massa muscular.', 'hipertrofia': 'Prescreveu um treino de hipertrofia.', 'hiit': 'Sugeriu HIIT como complemento.' },
+                    communication: { 'metabolismo': 'Explicou como o aumento dos músculos "acelera" o metabolismo basal.', 'energia': 'Conectou o treino com a melhora da fadiga.', 'complemento': 'Posicionou o exercício como um complemento ao tratamento médico.' },
+                    negative: { 'apenas aeróbio': 'Focar apenas em aeróbio é insuficiente para impactar a TMR.' },
+                    mustHave: ['massa muscular', 'hipertrofia']
+                }
+            },
+            caso9: {
+                summary: "<strong>Pontos-Chave:</strong> Pós-bariátrica. O paciente tem má absorção de nutrientes e alta perda de massa magra (sarcopenia secundária). O treino de força para hipertrofia é a prioridade absoluta.",
+                evaluation: {
+                    technical: { 'hipertrofia': 'Priorizou a hipertrofia.', 'força': 'Incluiu o treino de força como pilar.', 'proteína': 'Mencionou a importância da alta ingestão de proteína.' },
+                    communication: { 'recomposição': 'Explicou o conceito de recomposição corporal.', 'metabolismo': 'Justificou o treino de força como proteção contra o reganho de peso.', 'flacidez': 'Abordou como o ganho de massa magra pode ajudar na flacidez.' },
+                    negative: { 'muito cardio': 'Focar excessivamente em cardio pode agravar a perda muscular.', 'restrição': 'Sugerir mais restrição calórica é inadequado.' },
+                    mustHave: ['força', 'hipertrofia', 'proteína']
+                }
+            }
+        };
+
+        const modal = document.getElementById('prescription-modal');
+
+        function openPrescriptionModal(caseId) {
+            const caseData = casesData[caseId];
+            if (!caseData) { console.error("Dados do caso não encontrados para:", caseId); return; }
+            document.getElementById('current-case-id').value = caseId;
+            document.getElementById('prescription-text').value = localStorage.getItem(`prescription-${caseId}`) || '';
+            document.getElementById('communication-text').value = localStorage.getItem(`communication-${caseId}`) || '';
+            document.getElementById('student-name').value = localStorage.getItem('studentName') || '';
+
+            document.getElementById('modal-case-summary').innerHTML = caseData.summary;
+            const checklistContainer = document.getElementById('modal-checklist');
+            const techItems = Object.keys(caseData.evaluation.technical).map(k => `<li>Técnica: ${k}</li>`).join('');
+            const commItems = Object.keys(caseData.evaluation.communication).map(k => `<li>Comunicação: ${k}</li>`).join('');
+            checklistContainer.innerHTML = `<ul>${techItems}${commItems}</ul>`;
+            
+            modal.style.display = 'flex';
+        }
+
+        function closePrescriptionModal() {
+            modal.style.display = 'none';
+        }
+
+        function evaluatePrescription() {
+            const caseId = document.getElementById('current-case-id').value;
+            const studentName = document.getElementById('student-name').value.trim();
+            const prescriptionText = document.getElementById('prescription-text').value.trim();
+            const communicationText = document.getElementById('communication-text').value.trim();
+            
+            if (!studentName || !prescriptionText || !communicationText) {
+                alert('Por favor, preencha todos os campos: nome, prescrição e comunicação.');
+                return;
+            }
+            localStorage.setItem('studentName', studentName);
+            localStorage.setItem(`prescription-${caseId}`, prescriptionText);
+            localStorage.setItem(`communication-${caseId}`, communicationText);
+
+            const evaluation = casesData[caseId].evaluation;
+            let techScore = 0, commScore = 0;
+            let techSuccesses = [], commSuccesses = [];
+            let errors = [];
+
+            const techTextLower = prescriptionText.toLowerCase();
+            const commTextLower = communicationText.toLowerCase();
+
+            let techKeys = Object.keys(evaluation.technical);
+            techKeys.forEach(key => { if (techTextLower.includes(key)) { techSuccesses.push(evaluation.technical[key]); techScore += 100 / techKeys.length; } });
+
+            let commKeys = Object.keys(evaluation.communication);
+            commKeys.forEach(key => { if (commTextLower.includes(key)) { commSuccesses.push(evaluation.communication[key]); commScore += 100 / commKeys.length; } });
+
+            for (const key in evaluation.negative) { if (techTextLower.includes(key) || commTextLower.includes(key)) { errors.push(evaluation.negative[key]); } }
+            evaluation.mustHave.forEach(key => { if (!techTextLower.includes(key) && !commTextLower.includes(key)) { errors.push(`Ponto crítico esquecido: O conceito de <strong>${key.toUpperCase()}</strong> não foi abordado.`); } });
+
+            let finalScore = (techScore * 0.6) + (commScore * 0.4);
+            finalScore -= errors.length * 20;
+            finalScore = Math.max(0, Math.min(100, Math.round(finalScore)));
+
+            addFeedbackToHistory(caseId, studentName, finalScore);
+            closePrescriptionModal();
+        }
+
+        function addFeedbackToHistory(caseId, studentName, score) {
+            const historyContainer = document.getElementById(`history-container-${caseId}`);
+            const attemptNumber = (historyContainer.querySelectorAll('.history-item').length) + 1;
+            
+            let summaryText, scoreColor;
+            if (score >= 90) { summaryText = 'Excelente Proposta.'; scoreColor = 'green'; }
+            else if (score >= 70) { summaryText = 'Boa Proposta, com pontos a melhorar.'; scoreColor = 'orange'; }
+            else { summaryText = 'Insuficiente. Proposta com falhas críticas.'; scoreColor = 'red'; }
+
+            const historyItem = document.createElement('div');
+            historyItem.className = 'history-item';
+            historyItem.innerHTML = `
+                <div class="history-item-header">
+                    <span>Tentativa #${attemptNumber} por ${studentName}</span>
+                    <span class="history-item-score" style="color: ${scoreColor};">${score} / 100</span>
+                </div>
+                <p style="margin: 5px 0 0 0;"><em>${summaryText}</em></p>
+            `;
+            historyContainer.insertBefore(historyItem, historyContainer.children[1]); 
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closePrescriptionModal();
+            }
+        }
+    </script>
+</body>
+</html>
+
